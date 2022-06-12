@@ -1,9 +1,12 @@
 import './App.css';
+import Type from './Components/Type';
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <div>
+        <Type />
+      </div>
     </>
   );
 }
