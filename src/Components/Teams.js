@@ -6,6 +6,9 @@ function Teams({ formData, setFormData }) {
       <form>
         <div className="row">
           <div className="col">
+            <label for="teamTwoName" className="form-label mt-4">
+              Team one name :
+            </label>
             <input
               type="text"
               name="teamone"
@@ -19,6 +22,9 @@ function Teams({ formData, setFormData }) {
             />
           </div>
           <div className="col">
+            <label for="teamTwoName" className="form-label mt-4">
+              Team one type :
+            </label>
             <select
               id="teamOneType"
               name="teamOneType"
@@ -34,15 +40,20 @@ function Teams({ formData, setFormData }) {
             </select>
           </div>
         </div>
+        <hr className="mt-5" />
+        <p className="text-center">VS</p>
         <hr />
         <div className="row">
           <div className="col">
+            <label for="teamTwoName" className="form-label mt-4">
+              Team two name :
+            </label>
             <input
               type="text"
               name="teamTwoName"
               id="teamTwoName"
-              placeholder="Team Two Name"
-              className="form-control mt-4"
+              placeholder="Enter Team Two Name"
+              className="form-control"
               value={formData.teamTwoName}
               onChange={(event) =>
                 setFormData({ ...formData, teamTwoName: event.target.value })
@@ -50,10 +61,13 @@ function Teams({ formData, setFormData }) {
             />
           </div>
           <div className="col">
+            <label for="teamTwoType" className="form-label mt-4">
+              Team two type :
+            </label>
             <select
               id="teamTwoType"
               name="teamTwoType"
-              className="form-select mt-4"
+              className="form-select"
               value={formData.teamTwoType}
               onChange={(event) =>
                 setFormData({ ...formData, teamTwoType: event.target.value })

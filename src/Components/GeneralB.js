@@ -7,6 +7,9 @@ function GeneralB({ formData, setFormData }) {
       <form>
         <div class="row">
           <div class="col">
+            <label for="start-date" className="form-label ">
+              Start Date and Time :
+            </label>
             <input
               type="datetime-local"
               name="start date"
@@ -18,23 +21,29 @@ function GeneralB({ formData, setFormData }) {
                 setFormData({ ...formData, startDate: event.target.value })
               }
             />
+            <label for="location" className="form-label mt-4">
+              Match Location :
+            </label>
             <input
               type="text"
               name="location"
               id="location"
-              placeholder="Match Location"
-              className="form-control mt-4"
+              placeholder="Emter Match Location"
+              className="form-control"
               value={formData.matchLocation}
               onChange={(event) =>
                 setFormData({ ...formData, matchLocation: event.target.value })
               }
             />
+            <label for="tournament" className="form-label mt-4">
+              Tournament :
+            </label>
             <input
               type="text"
               name="tournament"
               id="tournament"
-              placeholder="Turnament Name"
-              className="form-control mt-4"
+              placeholder="Enter Turnament Name"
+              className="form-control"
               value={formData.tournament}
               onChange={(event) =>
                 setFormData({ ...formData, tournament: event.target.value })
@@ -42,6 +51,9 @@ function GeneralB({ formData, setFormData }) {
             />
           </div>
           <div class="col d-flex flex-column">
+            <label for="end-date" className="form-label">
+              End Date and Time :
+            </label>
             <input
               type="datetime-local"
               name="end date"
@@ -53,14 +65,16 @@ function GeneralB({ formData, setFormData }) {
                 setFormData({ ...formData, endDate: event.target.value })
               }
             />
-
+            <label for="comments" className="form-label mt-4">
+              Comments :
+            </label>
             <textarea
               name="comments"
               id="comments"
               cols="30"
               rows="10"
-              placeholder="Comments"
-              className="form-control mt-4"
+              placeholder="Enter Comments"
+              className="form-control"
               value={formData.comments}
               onChange={(event) =>
                 setFormData({ ...formData, comments: event.target.value })

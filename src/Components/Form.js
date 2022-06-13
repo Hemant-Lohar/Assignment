@@ -67,13 +67,13 @@ function Form() {
     <>
       <div className="container">
         <div className="titlebar">
-          <p className="bg-danger p-2 fs-5 fw-semibold text-black">
+          <p className="bg-danger p-2 fs-5 fw-semibold text-light">
             {FormTitles[page - 1]} {page}/3
           </p>
         </div>
-        <div className="container d-flex flex-column position-relative form-div">
+        <div className="container d-flex flex-column position-relative form-div border p-4">
           <div>{PageDispalay()}</div>
-          <div className="position-absolute bottom-0 end-0 ">
+          <div className="position-absolute bottom-0 end-0 mb-4 me-4">
             <button
               className={page === 1 ? "d-none" : "btn btn-danger me-3 px-5"}
               onClick={() => {

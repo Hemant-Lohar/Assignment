@@ -31,31 +31,34 @@ function Table({ data }) {
   console.log(Data)
   return (
     <>
-      <table className="table my-4">
-        <thead>
-          <tr>
-            {TableTitile.map((curelem) => {
-              return <th scope="col">{curelem.title}</th>;
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {Data.map((curelem) => {
-            return (
-              <tr key={curelem.id}>
-                <td scope="col">{curelem.name.teamOneName}({curelem.name.teamOneType})</td>
-                <td scope="col">{curelem.name.teamTwoName}({curelem.name.teamTwoType})</td>
-                <td scope="col">{curelem.name.matchType}</td>
-                <td scope="col">{curelem.name.tournament}</td>
-                <td scope="col">{curelem.name.startDate}</td>
-                <td scope="col">{curelem.name.endDate}</td>
-                <td scope="col">{curelem.name.matchLocation}</td>
-                <td scope="col">{curelem.name.comments}</td>
+      <div className="table-responsive">
+          <table className="table my-4 table-light table-bordered">
+            <thead>
+              <tr>
+                {TableTitile.map((curelem) => {
+                  return <th className="col-sm-1" scope="col">{curelem.title}</th>;
+                })}
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+              {Data.map((curelem) => {
+                return (
+                  <tr key={curelem.id}>
+                    <td scope="col">{curelem.name.teamOneName}({curelem.name.teamOneType})</td>
+                    <td scope="col">{curelem.name.teamTwoName}({curelem.name.teamTwoType})</td>
+                    <td scope="col">{curelem.name.matchType}</td>
+                    <td scope="col">{curelem.name.tournament}</td>
+                    <td scope="col">{curelem.name.startDate}</td>
+                    <td scope="col">{curelem.name.endDate}</td>
+                    <td scope="col">{curelem.name.matchLocation}</td>
+                    <td className="overflow-scroll col-sm-1" scope="col">{curelem.name.comments}</td>
+                  
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+      </div>
     </>
   );
 }

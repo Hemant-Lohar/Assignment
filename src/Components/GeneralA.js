@@ -7,6 +7,9 @@ function GeneralA({ formData, setFormData }) {
       <form>
         <div className="row">
           <div className="col">
+            <label for="start-date" className="form-label ">
+              Start Date and Time :
+            </label>
             <input
               type="datetime-local"
               name="startDate"
@@ -18,12 +21,15 @@ function GeneralA({ formData, setFormData }) {
                 setFormData({ ...formData, startDate: event.target.value })
               }
             />
+            <label for="type" className="form-label mt-4">
+              Match Location :
+            </label>
             <input
               type="text"
               name="location"
               id="location"
-              placeholder="Match Location"
-              className="form-control mt-4"
+              placeholder="Enter Match Location"
+              className="form-control"
               value={formData.matchLocation}
               onChange={(event) =>
                 setFormData({ ...formData, matchLocation: event.target.value })
@@ -31,6 +37,9 @@ function GeneralA({ formData, setFormData }) {
             />
           </div>
           <div class="col d-flex flex-column">
+            <label for="type" className="form-label">
+              End Date and Time
+            </label>
             <input
               type="datetime-local"
               name="endDate"
@@ -42,14 +51,16 @@ function GeneralA({ formData, setFormData }) {
                 setFormData({ ...formData, endDate: event.target.value })
               }
             />
-
+            <label for="type" className="form-label mt-4">
+              Comments :
+            </label>
             <textarea
               name="comments"
               id="comments"
               cols="30"
               rows="10"
-              placeholder="Comments"
-              className="form-control mt-4"
+              placeholder="Enter Comments"
+              className="form-control"
               value={formData.comments}
               onChange={(event) =>
                 setFormData({ ...formData, comments: event.target.value })
