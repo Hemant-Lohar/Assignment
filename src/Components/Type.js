@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
-function Type() {
+
+function Type({formData, setFormData}) {
   return (
     <>
       <form>
@@ -11,7 +12,8 @@ function Type() {
               name="type"
               placeholder="Match Type"
               className="form-select"
-              aria-label="Default select example"
+              value={formData.matchType}
+              onChange={(event) => setFormData({...formData, matchType: event.target.value })}
             >
               <option selected>Match Type</option>
               <option value="Friendly">Friendly</option>
