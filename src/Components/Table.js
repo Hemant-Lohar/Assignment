@@ -36,22 +36,22 @@ function Table({ data }) {
             <thead>
               <tr>
                 {TableTitile.map((curelem) => {
-                  return <th className="col-sm-1" scope="col">{curelem.title}</th>;
+                  return <th className="col-sm-1" >{curelem.title}</th>;
                 })}
               </tr>
             </thead>
             <tbody>
               {Data.map((curelem) => {
                 return (
-                  <tr key={curelem.id}>
-                    <td scope="col">{curelem.name.teamOneName}({curelem.name.teamOneType})</td>
-                    <td scope="col">{curelem.name.teamTwoName}({curelem.name.teamTwoType})</td>
-                    <td scope="col">{curelem.name.matchType}</td>
-                    <td scope="col">{curelem.name.tournament}</td>
-                    <td scope="col">{curelem.name.startDate}</td>
-                    <td scope="col">{curelem.name.endDate}</td>
-                    <td scope="col">{curelem.name.matchLocation}</td>
-                    <td className="overflow-scroll col-sm-1" scope="col">{curelem.name.comments}</td>
+                  <tr height="100px" key={curelem.id}>
+                    <td >{curelem.name.teamOneName}({curelem.name.teamOneType})</td>
+                    <td >{curelem.name.teamTwoName}({curelem.name.teamTwoType})</td>
+                    <td >{curelem.name.matchType}</td>
+                    <td >{curelem.name.tournament}</td>
+                    <td >{curelem.name.startDate}</td>
+                    <td >{curelem.name.endDate}</td>
+                    <td >{curelem.name.matchLocation}</td>
+                    <td className="overflow-scroll " >{curelem.name.comments}</td>
                   
                   </tr>
                 );
